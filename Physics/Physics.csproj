@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1263AC87-5FF1-4E28-9E32-2D9E9B222D7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Physics</RootNamespace>
+    <AssemblyName>Physics</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Farseer Physics Engine 3.3.1 XNA\Farseer Physics XNA WP7.csproj" />
+    <None Include="Farseer Physics Engine 3.3.1 XNA\Farseer Physics XNA Xbox360.csproj" />
+    <None Include="Farseer Physics Engine 3.3.1 XNA\Farseer Physics XNA.csproj" />
+    <None Include="Farseer Physics Engine 3.3.1 XNA\Xbox 360 Copy of Farseer Physics XNA.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Farseer Physics Engine 3.3.1 XNA\Background.png" />
+    <Content Include="Farseer Physics Engine 3.3.1 XNA\Properties\AppManifest.xml" />
+    <Content Include="Farseer Physics Engine 3.3.1 XNA\Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Collision.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Distance.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\DynamicTree.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\DynamicTreeBroadPhase.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\IBroadPhase.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\QuadTree.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\QuadTreeBroadPhase.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Shapes\CircleShape.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Shapes\EdgeShape.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Shapes\LoopShape.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Shapes\PolygonShape.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\Shapes\Shape.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Collision\TimeOfImpact.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\ConvexHull\ChainHull.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\ConvexHull\GiftWrap.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\ConvexHull\Melkman.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\BayazitDecomposer.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDTDecomposer.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\DelaunayTriangle.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFront.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\AdvancingFrontNode.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\DTSweep.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepConstraint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepContext.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\DTSweepPointComparator.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Delaunay\Sweep\PointOnEdgeException.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\ITriangulatable.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Orientation.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Polygon\Polygon.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Polygon\PolygonPoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Polygon\PolygonSet.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Sets\ConstrainedPointSet.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Sets\PointSet.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\TriangulationConstraint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\TriangulationContext.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\TriangulationMode.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\TriangulationPoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\TriangulationUtil.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Util\FixedArray3.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Util\FixedBitArray3.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Util\PointGenerator.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\CDT\Util\PolygonGenerator.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\EarclipDecomposer.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\FlipcodeDecomposer.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Decomposition\SeidelDecomposer.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\FixedArray.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\HashSet.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\LineTools.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Math.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Path.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PathManager.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PhysicsLogic\Explosion.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PhysicsLogic\PhysicsLogic.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PolygonManipulation\CuttingTools.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PolygonManipulation\SimplifyTools.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PolygonManipulation\YuPengClipper.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\PolygonTools.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Serialization.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\TextureTools\MarchingSquares.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\TextureTools\MSTerrain.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\TextureTools\TextureConverter.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Common\Vertices.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\AbstractForceController.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\BuoyancyController.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\Controller.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\GravityController.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\SimpleWindForce.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Controllers\VelocityLimitController.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\DebugView.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Body.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\BreakableBody.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\ContactManager.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Contacts\Contact.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Contacts\ContactSolver.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Fixture.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Island.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\AngleJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\DistanceJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedAngleJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedDistanceJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedFrictionJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedLineJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedMouseJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedPrismaticJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FixedRevoluteJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\FrictionJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\GearJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\Joint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\LineJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\PrismaticJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\PulleyJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\RevoluteJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\RopeJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\SliderJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\Joints\WeldJoint.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\TimeStep.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\World.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Dynamics\WorldCallbacks.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Factories\BodyFactory.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Factories\FixtureFactory.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Factories\JointFactory.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Factories\LinkFactory.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Properties\AssemblyInfo.cs" />
+    <Compile Include="Farseer Physics Engine 3.3.1 XNA\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FNA\FNA.csproj">
+      <Project>{35253ce1-c864-4cd3-8249-4d1319748e8f}</Project>
+      <Name>FNA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

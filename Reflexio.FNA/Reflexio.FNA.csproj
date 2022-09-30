@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDC3BDAF-D9F7-4692-B099-B063DFFBF6DB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Reflexio.FNA</RootNamespace>
+    <AssemblyName>Reflexio.FNA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>koalaIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchievementState.cs" />
+    <Compile Include="ContactManager.cs" />
+    <Compile Include="Data Structures\Set.cs" />
+    <Compile Include="Data Structures\SortedSet.cs" />
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="LevelCreator.cs" />
+    <Compile Include="Menus\AchievementMenu.cs" />
+    <Compile Include="Menus\ControlMenu.cs" />
+    <Compile Include="Menus\EasyMenu.cs" />
+    <Compile Include="Menus\GameOverMenu.cs" />
+    <Compile Include="Menus\HardMenu.cs" />
+    <Compile Include="Menus\LevelMenu.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Menus\MediumMenu.cs" />
+    <Compile Include="Menus\PauseMenu.cs" />
+    <Compile Include="Menus\TutorialMenu.cs" />
+    <Compile Include="Menus\WinMenu.cs" />
+    <Compile Include="Misc\AnimationTexture.cs" />
+    <Compile Include="Misc\DialogDisplay.cs" />
+    <Compile Include="Objects\Block.cs" />
+    <Compile Include="Objects\Collectible.cs" />
+    <Compile Include="Objects\Door.cs" />
+    <Compile Include="Objects\Key.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\ReflectableAndOrientable.cs" />
+    <Compile Include="Objects\ReflectableObject.cs" />
+    <Compile Include="Objects\Spike.cs" />
+    <Compile Include="Objects\Switch.cs" />
+    <Compile Include="Objects\Wall.cs" />
+    <Compile Include="PhysicsObject.cs" />
+    <Compile Include="PlayerController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Views\GameOverView.cs" />
+    <Compile Include="Views\LevelView.cs" />
+    <Compile Include="Views\Menu.cs" />
+    <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Views\PauseView.cs" />
+    <Compile Include="Views\SingleItemMenu.cs" />
+    <Compile Include="Views\SingleItemMenuView.cs" />
+    <Compile Include="Views\SpecialMenu.cs" />
+    <Compile Include="Views\SpecialMenuView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FNA\FNA.csproj">
+      <Project>{35253ce1-c864-4cd3-8249-4d1319748e8f}</Project>
+      <Name>FNA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Physics\Physics.csproj">
+      <Project>{1263ac87-5ff1-4e28-9e32-2d9e9b222d7f}</Project>
+      <Name>Physics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="koalaIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
